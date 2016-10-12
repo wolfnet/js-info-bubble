@@ -97,7 +97,6 @@ function InfoBubble(opt_options) {
   this.buildDom_();
   this.setValues(options);
 }
-window['InfoBubble'] = InfoBubble;
 
 
 /**
@@ -1778,3 +1777,5 @@ InfoBubble.prototype.positionCloseButton_ = function() {
   this.close_.style['right'] = this.px(right);
   this.close_.style['top'] = this.px(top);
 };
+
+module.exports = InfoBubble;

@@ -505,6 +505,10 @@ InfoBubble.prototype.shadowStyle_changed = function() {
       shadow = '0 0 2px rgba(33,33,33,0.3)';
       backgroundColor = 'rgba(33,33,33,0.35)';
       break;
+    case 3:
+      shadow = 'rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px';
+      backgroundColor = 'transparent';
+      break;
   }
   this.bubbleShadow_.style['boxShadow'] =
       this.bubbleShadow_.style['webkitBoxShadow'] =
@@ -908,6 +912,7 @@ InfoBubble.prototype.draw = function() {
 
   switch (shadowStyle) {
     case 1:
+    case 3:
       // Shadow is behind
       this.bubbleShadow_.style['top'] = this.px(top + tabHeight - 1);
       this.bubbleShadow_.style['left'] = this.px(left);
